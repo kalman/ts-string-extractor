@@ -1,6 +1,6 @@
 {
   "name": "ts-string-extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extracts the string literal contents of TypeScript function calls",
   "main": "dist/index.js",
   "dependencies": {

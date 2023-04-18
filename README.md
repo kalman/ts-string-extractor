@@ -5,7 +5,7 @@ Can also check that the function calls are valid calls to [`polyglot.t`](https:/
 ## Usage
 
 ```sh
-npm run ts-string-extractor -- -n function_name [-p tsconfig.json] [--check-polyglot] [--check-only] [file ...]
+bin/ts-string-extractor -n function_name [-p tsconfig.json] [--check-polyglot] [--check-only] [file ...]
 ```
 
 ## Example

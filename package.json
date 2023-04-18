@@ -4,35 +4,8 @@
   "description": "Extracts the string literal contents of TypeScript function calls",
   "main": "dist/index.js",
   "dependencies": {
-    "arg": "^5.0.2",
-    "debug": "^4.3.4",
-    "acorn": "^8.8.2",
-    "cac": "^6.7.14",
-    "fsevents": "^2.3.2",
-    "has": "^1.0.3",
-    "function-bind": "^1.1.1",
-    "esbuild": "^0.17.17",
-    "ms": "^2.1.2",
-    "jsonc-parser": "^3.2.0",
-    "path-parse": "^1.0.7",
-    "nanoid": "^3.3.6",
-    "mlly": "^1.2.0",
-    "pathe": "^1.1.0",
-    "is-core-module": "^2.12.0",
-    "picocolors": "^1.0.0",
-    "pkg-types": "^1.0.2",
-    "postcss": "^8.4.22",
-    "prettier": "^2.8.7",
-    "supports-preserve-symlinks-flag": "^1.0.0",
-    "typescript": "^5.0.4",
-    "resolve": "^1.22.2",
-    "rollup": "^3.20.4",
-    "source-map-js": "^1.0.2",
-    "vite": "^4.2.1",
-    "ufo": "^1.1.1",
-    "vite-node": "^0.30.1"
+    "arg": "^5.0.2"
   },
-  "devDependencies": {},
   "bin": {
     "ts-string-extractor": "bin/ts-string-extractor"
   },
@@ -42,7 +15,6 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "install": "tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -54,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/kalman/ts-string-extractor/issues"
   },
-  "homepage": "https://github.com/kalman/ts-string-extractor#readme"
+  "homepage": "https://github.com/kalman/ts-string-extractor#readme",
+  "devDependencies": {
+    "prettier": "2.8.7",
+    "typescript": "5.0.4"
+  }
 }

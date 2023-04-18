@@ -69,23 +69,29 @@ function subKeysFromText(text: string): string[] {
     keys.push(text.slice(index + 1, closeIndex));
     index = text.indexOf('{', index + 1);
   }
-  return keys;
+  return uniqSorted(keys);
 }
 
 function subKeysFromObjectLiteral(node: ts.Expression | undefined): string[] {
   const keys: string[] = [];
   if (node && ts.isObjectLiteralExpression(node)) {
     for (const prop of node.properties) {
-      if (ts.isPropertyAssignment(prop)) {
+      if (ts.isPropertyAssignment(prop) || ts.isShorthandPropertyAssignment(prop)) {
         if (ts.isIdentifier(prop.name) || ts.isStringLiteral(prop.name)) {
           keys.push(prop.name.text);
         }
       }
     }
   }
-  return keys;
+  return uniqSorted(keys);
 }
 
 function listsEqualUnordered(a: string[], b: string[]): boolean {
   return a.length === b.length && a.every(item => b.includes(item));
+}
+
+function uniqSorted(list: string[]): string[] {
+  list = [...new Set(list)];
+  list.sort();
+  return list;
 }
